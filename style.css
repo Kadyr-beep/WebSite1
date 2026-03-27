@@ -1,6 +1,6 @@
 
 
-/* кнопка старт */
+
 #startBtn {
   position: absolute;
   
@@ -103,7 +103,7 @@
 
 
 
-/* желтый фон / солнце */
+
 #sun {
   position: fixed;
   top: 50%;
@@ -118,11 +118,11 @@
   align-items: center;
   transition: all 3s ease-in-out;
 
-  /* центрирование изначально */
+
   transform: translate(-50%, -50%);
 }
 
-/* конечное состояние солнца */
+
 #sun.active {
   
   width: 150px;
@@ -160,9 +160,9 @@ left: 50%;
   position: fixed;
   bottom: 0;
   width: 200vw;
-  height: 50vh; /* сколько занимает море */
-  background: linear-gradient(to top, #1E90FF, #87CEFA); /* синий градиент */
-  z-index: 2; /* ниже солнца */
+  height: 50vh; 
+  background: linear-gradient(to top, #1E90FF, #87CEFA);
+  z-index: 2; 
     border-top-left-radius: 50% 20%;
   border-top-right-radius: 50% 20%;
 }
@@ -176,7 +176,7 @@ left: 50%;
   width: 200%;
   height: 60px;
 
-  /* Многослойный свет воды */
+ 
   background:
     radial-gradient(
       ellipse at 50% 50%,
@@ -229,12 +229,12 @@ left: 50%;
   background: radial-gradient(circle, rgba(0,0,0,0.4) 10px, black 100%);
 }
 
-/* затемнение */
+
 .fade-in {
   animation: fadeIn 2s ease forwards;
 }
 
-/* осветление */
+
 .fade-out {
   animation: fadeOut 2s ease forwards;
 }
@@ -249,7 +249,7 @@ left: 50%;
   100% { opacity: 0; }
 }
 
-/* контейнер подарка */
+
 #giftWrap {
   position: fixed;
   bottom: 40vh;
@@ -262,7 +262,7 @@ left: 50%;
   transition: transform 2s ease, opacity 2s ease;
 }
 
-/* появляется вместе с кнопками */
+
 #giftWrap.active {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
@@ -271,7 +271,7 @@ left: 50%;
 
 
 
-/* текст */
+
 #giftText {
   font-size: 32px;
   font-weight: 600;
@@ -299,7 +299,7 @@ transition: opacity 1s ease;
 opacity: 0;
 }
 
-/* коробка */
+
 .gift {
   animation: floatGift 3s ease-in-out infinite;
   position: relative;
@@ -327,7 +327,6 @@ opacity: 0;
 
 
 
-/* лента */
 .box::before,
 .lid::before {
   content: "";
@@ -339,7 +338,7 @@ opacity: 0;
   transform: translateX(-50%);
 }
 
-/* крышка */
+
 .lid {
   width: 200px;
   height: 35px;
@@ -349,10 +348,10 @@ opacity: 0;
   top: -25px;
   left: -10px;
   transform-origin: left center;
-  transition: transform 1s ease; /* параллельно солнцу */
+  transition: transform 1s ease; 
 }
 
-/* открытие */
+
 .gift.open .lid {
   transform: rotate(-110deg);
 }
@@ -361,7 +360,7 @@ opacity: 0;
   opacity: 1;
 }
 
-/* исчезновение подарка */
+
 #giftWrap.hide {
   transition: scale 2s ease, transform 2s ease, opacity 0.5s ease;
   opacity: 0;
@@ -398,7 +397,7 @@ opacity: 0;
 }
 
 
-/* 🎉 Контейнер поздравления */
+
 #birthdayTitle {
   position: fixed;
   top: 10%;
@@ -426,7 +425,7 @@ color: transparent;
     0 0 40px rgba(255, 69, 0, 0.4);
 }
 
-/* 🎂 Заголовок */
+
 #birthdayTitle.active {
 opacity: 1;
 scale: 1;
@@ -449,7 +448,7 @@ animation: effect 2s;
   opacity: 1;
   pointer-events: auto;
 }
-/* 💌 Стеклянная карточка */
+
 #birthdayCard {
   position: fixed;
   width: 200px;
@@ -512,7 +511,7 @@ opacity: 1;
 
 
 
-/* 🌙 Кнопка смены */
+
 #dayNightToggle {
   position: fixed;
   bottom: 40px;
@@ -533,12 +532,12 @@ opacity: 1;
   transition: all 1s ease;
 }
 
-/* Появляется после заката */
+
 #dayNightToggle.show {
   transform: translateX(-50%) scale(1);
 }
 
-/* Ночная версия кнопки */
+
 body.night #dayNightToggle {
   background: radial-gradient(circle, #ff0000, #8b0000);
   box-shadow:
@@ -555,11 +554,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: linear-gradient(#87CEEB, #E0F7FF); /* небо */
+  background-color: linear-gradient(#87CEEB, #E0F7FF);
   transition: all 3s ease-in-out;
 }
 
-/* 🌅 ЗАКАТНОЕ НЕБО */
+
 body.sunset {
   background: linear-gradient(
     to top,
@@ -573,7 +572,7 @@ body.sunset {
 
 
 
-/* 🌊 Отражение солнца */
+
 body.sunset #sea::after {
   content: "";
   position: absolute;
@@ -585,7 +584,7 @@ body.sunset #sea::after {
   width: 220px;
   height: 65vh;
 
-  /* СЛОЖНЫЙ ГРАДИЕНТ отражения */
+ 
   background:
     linear-gradient(
       to bottom,
@@ -598,10 +597,10 @@ body.sunset #sea::after {
       transparent 95%
     );
 
-  /* мягкая размытость */
+
   filter: blur(10px);
 
-  /* слегка неровные края */
+
   border-radius: 50% 50% 60% 60%;
 
   opacity: 0.9;
@@ -647,17 +646,17 @@ body.sunset #sea {
 }
 
 
-/* 🌌 BLOOD MOON NIGHT */
+
 body.night {
   background:
 
-    /* ☄ Комета (голова) */
+ 
     radial-gradient(circle at 80% 20%,
       rgba(255,120,120,0.9) 0px,
       rgba(255,80,80,0.6) 4px,
       transparent 8px),
 
-    /* ☄ Хвост кометы */
+ 
     linear-gradient(135deg,
       rgba(255,0,0,0.0) 0%,
       rgba(255,0,0,0.15) 20%,
@@ -665,20 +664,20 @@ body.night {
       rgba(255,0,0,0.15) 60%,
       transparent 80%),
 
-    /* ✨ Крупные звезды */
+
     radial-gradient(circle at 15% 25%, white 1px, transparent 2px),
     radial-gradient(circle at 70% 15%, white 1px, transparent 2px),
     radial-gradient(circle at 40% 10%, rgba(255,255,255,0.9) 1px, transparent 2px),
     radial-gradient(circle at 85% 35%, rgba(255,255,255,0.8) 1px, transparent 2px),
 
-    /* ✨ Мелкие звезды (рассыпь) */
+  
     radial-gradient(circle at 10% 60%, rgba(255,255,255,0.7) 0.5px, transparent 1.5px),
     radial-gradient(circle at 30% 75%, rgba(255,255,255,0.6) 0.5px, transparent 1.5px),
     radial-gradient(circle at 55% 65%, rgba(255,255,255,0.6) 0.5px, transparent 1.5px),
     radial-gradient(circle at 75% 55%, rgba(255,255,255,0.5) 0.5px, transparent 1.5px),
     radial-gradient(circle at 90% 70%, rgba(255,255,255,0.5) 0.5px, transparent 1.5px),
 
-    /* 🌫 Лёгкие облака */
+ 
     radial-gradient(ellipse at 30% 40%,
       rgba(120,0,0,0.08) 0%,
       rgba(80,0,40,0.05) 40%,
@@ -689,19 +688,19 @@ body.night {
       rgba(60,0,20,0.05) 40%,
       transparent 70%),
 
-    /* 🔴 Багровое свечение горизонта */
+  
     radial-gradient(ellipse at 50% 85%,
       rgba(180,0,0,0.45) 0%,
       rgba(120,0,0,0.3) 25%,
       rgba(60,0,20,0.2) 40%,
       transparent 70%),
 
-    /* 🌑 Виньетка */
+ 
     radial-gradient(circle at 50% 50%,
       transparent 40%,
       rgba(0,0,0,0.65) 90%),
 
-    /* 🌌 Основное небо */
+
     linear-gradient(
       to top,
       #050000 0%,
@@ -736,7 +735,7 @@ body.night {
       rgba(255,80,80,0.6) 4px,
       transparent 8px),
 
-    /* ☄ Хвост кометы */
+ 
     linear-gradient(135deg,
       rgba(255,0,0,0.0) 0%,
       rgba(255,0,0,0.15) 20%,
@@ -744,20 +743,20 @@ body.night {
       rgba(255,0,0,0.15) 60%,
       transparent 80%),
 
-    /* ✨ Крупные звезды */
+  
     radial-gradient(circle at 15% 25%, white 1px, transparent 2px),
     radial-gradient(circle at 70% 15%, white 1px, transparent 2px),
     radial-gradient(circle at 40% 10%, rgba(255,255,255,0.9) 1px, transparent 2px),
     radial-gradient(circle at 85% 35%, rgba(255,255,255,0.8) 1px, transparent 2px),
 
-    /* ✨ Мелкие звезды (рассыпь) */
+  
     radial-gradient(circle at 10% 60%, rgba(255,255,255,0.7) 0.5px, transparent 1.5px),
     radial-gradient(circle at 30% 75%, rgba(255,255,255,0.6) 0.5px, transparent 1.5px),
     radial-gradient(circle at 55% 65%, rgba(255,255,255,0.6) 0.5px, transparent 1.5px),
     radial-gradient(circle at 75% 55%, rgba(255,255,255,0.5) 0.5px, transparent 1.5px),
     radial-gradient(circle at 90% 70%, rgba(255,255,255,0.5) 0.5px, transparent 1.5px),
 
-    /* 🌫 Лёгкие облака */
+ 
     radial-gradient(ellipse at 30% 40%,
       rgba(120,0,0,0.08) 0%,
       rgba(80,0,40,0.05) 40%,
@@ -768,19 +767,19 @@ body.night {
       rgba(60,0,20,0.05) 40%,
       transparent 70%),
 
-    /* 🔴 Багровое свечение горизонта */
+    
     radial-gradient(ellipse at 50% 85%,
       rgba(180,0,0,0.45) 0%,
       rgba(120,0,0,0.3) 25%,
       rgba(60,0,20,0.2) 40%,
       transparent 70%),
 
-    /* 🌑 Виньетка */
+ 
     radial-gradient(circle at 50% 50%,
       transparent 40%,
       rgba(0,0,0,0.65) 90%),
 
-    /* 🌌 Основное небо */
+  
     linear-gradient(
       to top,
       #050000 0%,
@@ -797,7 +796,6 @@ body.night {
 
 
 
-/* 🌕 ЛУНА */
 body.night #sun.active
  {
   background: radial-gradient(circle at 40% 40%,
@@ -816,7 +814,7 @@ body.night #sun.active
 
 @keyframes day {
 
-  /* старт — обычное солнце */
+ 
   0% {
     transform: translate(-50%, -50%);
     opacity: 1;
@@ -827,13 +825,13 @@ background: rgb(255, 170, 10);
     0 0 150px rgba(255,190,0,0.4);
   }
 
-  /* середина — краснеет и опускается */
+  
   50% {
     transform: translate(-50%, 150%);
     opacity: 0;
   }
 
-  /* конец */
+ 
   100% {
     transform: translate(-50%, -50%);
     opacity: 1;
@@ -849,7 +847,7 @@ background: rgb(255, 170, 10);
   }
 }
 
-/* 🌊 Ночное море */
+
 body.night #sea {
   z-index: 20;
   background: linear-gradient(
@@ -861,7 +859,7 @@ body.night #sea {
   transition: all 3s ease-in-out;
 }
 
-/* 🌕 Отражение луны */
+
 body.night #sea::after {
   content: "";
   position: absolute;
