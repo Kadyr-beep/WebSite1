@@ -59,9 +59,9 @@ startBtn.addEventListener('transitionend', (r) => {
 
     if (elem.requestFullscreen) {
     elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { // Safari
+  } else if (elem.webkitRequestFullscreen) { 
     elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { // старый Edge
+  } else if (elem.msRequestFullscreen) { 
     elem.msRequestFullscreen();
   }
 
@@ -83,13 +83,12 @@ net.style.transition = "transform 0.3s ease";
 
   clearTimeout(returnTimer);
 
-  // случайное смещение
-  const randomX = Math.random() * 1570 - 1030; // от -150 до +150 1640 1070
-  const randomY = Math.random() * 920 - 620; // от -100 до +100
+  const randomX = Math.random() * 1570 - 1030; 
+  const randomY = Math.random() * 920 - 620; 
 
   net.style.transform = `translate(${randomX}px, ${randomY}px)`;
 
-  // вернуть обратно через 3 секунды
+
   returnTimer = setTimeout(() => {
     net.style.transform = 'translate(0px, 0px)';
   }, 3000);
@@ -111,7 +110,7 @@ if (document.body.classList.contains("night")) {
     toggleBtn.textContent = "🌙";
 
     document.querySelector("#birthdayCard p").textContent =
-      "Здесь будет твоё красивое поздравление. Напиши его позже ✨";
+      "...";
 
   } else {
 
@@ -120,10 +119,14 @@ if (document.body.classList.contains("night")) {
     toggleBtn.textContent = "☀️";
 
     document.querySelector("#birthdayCard p").textContent =
-      "Твоя уникальность сравнима с кровавой луной, которая появляется лишь в особые моменты. Пусть эта ночь принесёт тебе магию, счастье и исполнение всех желаний 🌙✨";
+      // "Твоя уникальность сравнима с кровавой луной, которая появляется лишь в особые моменты. Пусть эта ночь принесёт тебе магию, счастье и исполнение всех желаний 🌙✨"
+      "Text..."
+      ;
       
     document.querySelector("#birthdayCard2 p").textContent =
-      "Я больше ничего не смог придумать. И из-за этого я сейчас дополняю всякой ненужной информацией, чтобы заполнить это поле😅. Еще раз с днюхой шоль!😶‍🌫️🫠";
+      // "Я больше ничего не смог придумать. И из-за этого я сейчас дополняю всякой ненужной информацией, чтобы заполнить это поле😅. Еще раз с днюхой шоль!😶‍🌫️🫠"
+      "и тут тоже"
+      ;
   }
 
   toggleBtn.remove();
